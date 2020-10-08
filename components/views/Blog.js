@@ -4,7 +4,7 @@ export default st => `
 <section id="blog">
 ${st.posts
   .map(post => {
-    formatBlogPost(post);
+    return formatBlogPost(post);
   })
   .join()}
 </section>`;
