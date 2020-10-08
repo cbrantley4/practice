@@ -23,6 +23,7 @@
     "stylelint-vscode": "^7.0.0-6"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "lodash": "^4.17.20",
     "navigo": "^7.1.2",
     "store": "^2.0.12"
