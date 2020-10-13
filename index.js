@@ -1,8 +1,9 @@
-import Navigo from "navigo";
-import { capitalize } from "lodash";
-import * as state from "./store";
-import { Header, Nav, Main, Footer } from "./components";
-import axios from "axios";
+const Navigo = require("navigo");
+const { capitalize } = require("lodash");
+const store = require("./store");
+const { Header, Nav, Main, Footer } = require("./components");
+const axios = require("axios");
+const env = require(".env");
 
 axios
   .get("https://jsonplaceholder.typicode.com/posts")
@@ -21,18 +22,20 @@ axios
 
 axios
   .get(
-    "https://api.openweathermap.org/data/2.5/weather?q=st%20louis&APPID=fbb30b5d6cf8e164ed522e5082b49064"
+    `https://api.openweathermap.org/data/2.5/weather?APPID=${process.env.OPEN_WEATHER_API_KEY}&q=st.%20louis`
   )
   .then(response => {
     state.Home.weather.city = response.name;
     state.Home.weather.temp = response.main.temp;
-    state.Home.weather.description = response.weather.main;
-  });
+    state.Home.weather.feelsLike = response.data.main.fells_like;
+    state.Home.weather.description = response.data.weather[0].main;
+  })
+  .catch(err => console.log(err));
 
 axios
   .get(`https://api.github.com/users/cbrantley/repos`, {
     headers: {
-      Authorization: `token 83a3d94c2cd572128cf2f90dc1ccd67e5b912824`
+      Authorization: `${process.env.GITHUB_TOKEN}`
     }
   })
   .then(response => console.log(response.data));

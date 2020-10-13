@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "parcel-build": "parcel build index.html && cp _redirects ./dist/",
-    "serve": "parcel index.html"
+    "serve": "parcel index.html",
+    "watch:server": "nodemon --watch ./server -e js ./server/index.js"
   },
   "keywords": [],
   "author": "",
@@ -24,8 +25,11 @@
   },
   "dependencies": {
     "axios": "^0.20.0",
+    "dotenv": "^8.2.0",
     "lodash": "^4.17.20",
     "navigo": "^7.1.2",
+    "nodemon": "^2.0.4",
+    "save-dev": "0.0.1-security",
     "store": "^2.0.12"
   }
 }

@@ -3,4 +3,4 @@
 dist
 node_modules
 *.sw*
-GHtoken: 83a3d94c2cd572128cf2f90dc1ccd67e5b912824
+.env
