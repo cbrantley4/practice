@@ -1,9 +1,9 @@
-const Navigo = require("navigo");
-const { capitalize } = require("lodash");
-const store = require("./store");
-const { Header, Nav, Main, Footer } = require("./components");
-const axios = require("axios");
-const env = require(".env");
+import Navigo from "navigo";
+import { capitalize } from "lodash";
+import * as state from "./store";
+import { Header, Nav, Main, Footer } from "./components";
+import axios from "axios";
+import "./env";
 
 axios
   .get("https://jsonplaceholder.typicode.com/posts")
