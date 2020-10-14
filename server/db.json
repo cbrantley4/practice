@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "body": "This is my new blog post",
+      "id": "134eb8ec-d1a8-42af-acee-5609c59b0d53"
+    },
+    {
+      "body": "Go Steelers",
+      "id": "612277a9-1d41-42dd-8f1b-dbf2b6e70f80"
+    },
+    {
+      "body": "Go Lions!",
+      "id": "806b4980-cfad-4037-afbe-9717bbbaccf4"
+    },
+    {
+      "body": "Yay for Savvy Coders",
+      "id": "4b42e67a-68fd-4075-8978-4064f8ce9824"
+    }
+  ]
+}
