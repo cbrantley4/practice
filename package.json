@@ -6,7 +6,7 @@
   "scripts": {
     "parcel-build": "parcel build index.html && cp _redirects ./dist/",
     "serve": "parcel index.html",
-    "start": "nodemon --watch ./server -e js ./server/index.js"
+    "start": "node ./server/index.js"
   },
   "keywords": [],
   "author": "",
@@ -32,10 +32,11 @@
     "lodash": "^4.17.20",
     "lodash-id": "^0.14.0",
     "lowdb": "^1.0.0",
+    "mongoose": "^5.10.11",
     "morgan": "^1.10.0",
     "navigo": "^7.1.2",
     "nodemon": "^2.0.6",
-    "pg": "^8.4.1",
+    "pg": "^8.4.2",
     "save-dev": "0.0.1-security",
     "store": "^2.0.12"
   }
