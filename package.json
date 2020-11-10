@@ -6,7 +6,8 @@
   "scripts": {
     "parcel-build": "parcel build index.html && cp _redirects ./dist/",
     "serve": "parcel index.html",
-    "start": "node ./server/index.js"
+    "start": "node ./server/index.js",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
